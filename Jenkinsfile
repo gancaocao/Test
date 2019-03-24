@@ -4,7 +4,7 @@ pipeline {
     stage('checkout') {
       agent any
       steps {
-        sh 'mvn clean package'
+        powershell(script: 'mvn clean package', returnStatus: true, returnStdout: true)
       }
     }
   }

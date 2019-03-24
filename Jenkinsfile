@@ -4,7 +4,7 @@ pipeline {
     stage('checkout') {
       agent any
       steps {
-        sh 'echo "ddd"'
+        sh 'mvn clean package'
       }
     }
   }
